@@ -40,18 +40,6 @@
 
 ---
 
-## 📁 Struktur File
-
-makeGraph/
-├── index.html # Halaman utama
-├── style.css # Gaya (opsional jika pakai Tailwind)
-├── script.js # Logika input dan pembuatan chart
-└── README.md # Dokumentasi proyek ini
-
-
-
----
-
 ## 📌 Cara Menggunakan
 
 1. Clone repositori ini atau unduh semua file
