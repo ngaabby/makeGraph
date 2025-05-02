@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>makeGraph - Simple Pie Chart Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">makeGraph</h1>
+        
+        <!-- Title Input -->
+        <div class="mb-6">
+            <label for="chartTitle" class="block text-sm font-medium text-gray-700 mb-2">Judul Grafik (Opsional)</label>
+            <input type="text" id="chartTitle" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Data Input Form -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-xl font-semibold mb-4">Input Data</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="label" class="block text-sm font-medium text-gray-700 mb-2">Label</label>
+                    <input type="text" id="label" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="value" class="block text-sm font-medium text-gray-700 mb-2">Nilai</label>
+                    <input type="number" id="value" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <button id="saveBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Simpan & Lanjutkan
+                </button>
+                <button id="createChartBtn" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    Buat Grafik
+                </button>
+                <button id="resetBtn" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    Reset
+                </button>
+            </div>
+            <!-- Saved Labels Display -->
+            <div id="savedLabels" class="mt-4 p-3 bg-gray-50 rounded-lg">
+                <h3 class="text-sm font-medium text-gray-700 mb-2">Label yang sudah disimpan:</h3>
+                <div id="labelsList" class="flex flex-wrap gap-2"></div>
+            </div>
+        </div>
+
+        <!-- Chart Container -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <canvas id="pieChart"></canvas>
+            <button id="downloadChartBtn" class="mt-4 bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full md:w-auto">Simpan Gambar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

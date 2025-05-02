@@ -1,0 +1,24 @@
+/* Custom styles */
+.container {
+    max-width: 800px;
+}
+
+#pieChart {
+    max-height: 400px;
+}
+
+#downloadChartBtn {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .flex {
+        flex-direction: column;
+    }
+    
+    .flex button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+} 
